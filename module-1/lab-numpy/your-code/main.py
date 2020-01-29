@@ -86,7 +86,30 @@ for i, x in enumerate(d):
                                 f[i, j, k] = 75
                         else:
                                 f[i, j, k] = 25
-print (f)
+print (f'Fuuuuck\n{f}')
+
+"""
+def transformNumber(d):
+    f = np.empty(d.shape)
+    d_max = np.max(d)
+    d_min = np.min(d)
+    d_mean = np.mean(d)
+    with np.nditer([d, f], op_flags=["readwrite"]) as it:
+        for i, e in it:
+            if i > d_min and i < d_mean:
+                e[...] = 25
+            if i > d_mean and i < d_max:
+                e[...] = 75
+            if i == d_mean:
+                e[...] = 50
+            if i == d_min:
+                e[...] = 0
+            if i == d_max:
+                e[...] = 100
+    return f
+f = transformNumber(f)
+"""
+
 
 """
 #17. Print d and f. Do you have your expected f?
